@@ -1,0 +1,165 @@
+
+.mobile-nav-fade {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 90;
+	background-color: rgba(86, 86, 86, 0.5);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.2s ease-in;
+
+	&--open {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+.mobile-nav {
+	position: fixed;
+	background-color: $white;
+	padding: 24px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 343px;
+	height: 100vh;
+    z-index: 99;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX(-50%);
+	transition: all 0.2s ease-in;
+	
+
+	&--open {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateX(0%);
+	}
+}
+
+.mobile-nav__top {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+}
+
+.mobile-nav__header {
+	@extend %flex_space_between;
+}
+
+.mobile-nav__logo {
+	font-family: var(--font-accent);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: $black;
+}
+
+#close-mobile-nav img {
+	width: 24px;
+	height: 24px;
+}
+
+.mobile-nav__bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	
+}
+
+.mobile-nav__search { 
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	height: 46px;
+	padding: 11px 16px;
+	border: 1px solid $grey;
+	border-radius: 6px;
+
+	
+}
+
+.mobile-nav__search-input {
+	font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+	color: $black;
+
+	&::placeholder {
+		font-family: var(--font-main);
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 100%;
+		color: $grey;
+	}
+}
+
+
+.mobile-nav__list {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.mobile-nav__item { 
+	padding: 0 0 16px 0;
+	border: 1px solid #E8ECEF;
+	font-family: var(--font-main);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.7;
+	color: $black;
+	
+	a {
+		color: inherit;
+	}
+	
+}
+
+.mobile-nav__socials {
+
+	.social-links {
+		justify-content: flex-start;
+	}
+}
+
+.mobile-nav__sign-in > a {
+	display: block;
+	width: 100%;
+	height: 52px;
+	border-radius: 6px;
+	font-size: 18px;
+	line-height: 52px;
+}
+
+.mobile-nav__links > .mobile-nav__list {
+	gap: 8px;
+
+	.mobile-nav__item {
+		@extend %flex_space_between;
+		padding-bottom: 8px;
+		border: none;
+		font-family: var(--font-main);
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.777;
+		letter-spacing: -0.4px;
+		color: $grey;
+
+		.shopping-count {
+			color: $white;
+		}
+	}
+}
+
+

@@ -1,0 +1,152 @@
+
+.footer {
+	background-color: $black;
+	padding: 80px 0 32px 0;
+
+	@media (max-width: $tablet-size) {
+		padding: 40px 0 24px 0;
+	}
+
+	@media (max-width: $tablet-mini) {
+		padding: 48px 0;
+	}
+}
+
+.footer-content { 
+	@extend %flex_space_between;
+	gap: 40px;
+	padding-bottom: 57px;
+	border-bottom: 1px solid $grey;
+
+	@media (max-width: $tablet-size) {
+		padding-bottom: 24px;
+	}
+
+	@media (max-width: $tablet-mini) {
+		flex-direction: column;
+		padding-bottom: 40px;
+	}
+}
+
+.footer__logo { 
+	@extend %flex_space_between;
+	justify-content: flex-start;
+	gap: 32px;
+
+	@media (max-width: $tablet-size) {
+		gap: 16px;
+	}
+
+	@media (max-width: $mobile) {
+		flex-direction: column;
+	}
+
+	
+}
+
+.footer__logo-logotipe { 
+	font-family: var(--font-accent);
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1;
+	color: $white;
+}
+
+.footer__logo-line { 
+	width: 1px;
+	height: 24px;
+	background-color: $grey;
+}
+
+.footer__logo-slogan { 
+	font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+	color: #E8ECEF;
+
+	@media (max-width: $tablet-mini) {
+		font-size: 14px;
+		line-height: 1.571;
+	}
+}
+
+.footer__list { 
+	@extend %flex_space_between;
+	gap: 40px;
+
+	@media (max-width: $tablet-size) {
+		gap: 16px;
+	}
+
+	@media (max-width: $tablet-mini) {
+		gap: 32px;
+	}
+
+	@media (max-width: $mobile-xl) {
+		flex-direction: column;
+	}
+
+	a {
+		font-family: var(--font-main);
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.571;
+		color: $white2;
+	}
+}
+
+.bottom-bar { 
+	@extend %flex_space_between;
+	gap: 40px;
+	padding: 16px 0;
+
+	@media (max-width: $tablet-mini) {
+		flex-direction: column;
+		gap: 32px;
+		padding: 24px 0;
+	}
+}
+
+.footer__copyright { 
+	@extend %flex_space_between;
+	justify-content: flex-start;
+	gap: 28px;
+
+	@media (max-width: $mobile-xl) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.copyright { 
+	font-family: var(--font-accent);
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.67;
+	color: #E8ECEF;
+
+	@media (max-width: $mobile-xl) {
+		width: 100%;
+		text-align: center;
+		order: 1;
+	}
+}
+.copyright__privacy, .copyright__terms { 
+	font-family: var(--font-accent);
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.67;
+	color: $white2;
+}
+
+.social {
+	@media (max-width: $tablet-mini) {
+		order: -1;
+	}
+} 
+
+.social-links { 
+	@extend %flex_space_between;
+	gap: 24px;
+}

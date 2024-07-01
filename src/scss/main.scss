@@ -1,0 +1,15 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Space+Grotesk:500);
+
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+
+/* Blocks */
+@import "./blocks/*.scss";

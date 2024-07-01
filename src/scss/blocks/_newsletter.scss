@@ -1,0 +1,107 @@
+
+.newsletter { 
+    background-color: #e2e4e3;
+    padding: 101px 0 93px 0;
+    background-image: url('./../img/newsletter/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media (max-width: $laptop-size) {
+        padding: 50px 0 ;
+    }
+
+    @media (max-width: $laptop-mini) {
+        background-size: auto;
+    }
+
+    @media (max-width: $tablet-size) {
+        background-size: cover;
+    }
+
+    @media (max-width: $tablet-mini) {
+        background-image: unset;
+        padding: 95px 0;
+    }
+}
+
+.newsletter__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+.newsletter__title {
+    margin-bottom: 8px;
+
+    .headline-4 {
+        @media (max-width: $tablet-mini) {
+            font-size: 28px;
+            line-height: 1.214;
+            letter-spacing: -0.6px;
+            text-align: center;
+        }
+    }
+ }
+
+.newsletter__desc {
+    margin-bottom: 32px;
+
+    p {
+        font-family: var(--font-main);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.67;
+        color: $black2;
+
+        @media (max-width: $tablet-mini) {
+            font-size: 14px;
+            line-height: 1.571;
+            text-align: center;
+        }
+    }
+ }
+
+.newsletter__form { 
+    width: 100%;
+    max-width: 488px;
+
+    @media (max-width: $tablet-size) {
+        max-width: 375px;
+    }
+}
+
+.email-form { 
+    @extend %flex_space_between;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(108, 114, 117, 0.5);
+}
+
+.email-form__input {
+    flex-grow: 1;
+    color: #6C7275;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.4px;
+
+    ::placeholder {
+        color: #6C7275;
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: -0.4px;
+    }
+ }
+
+.email-form__submit {
+    color: #6C7275;
+    transition: color 0.2s ease-in-out;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.4px;
+
+    &:hover {
+        color: $black;
+    }
+ }

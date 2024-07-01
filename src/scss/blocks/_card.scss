@@ -1,0 +1,140 @@
+
+.card {
+    //width: 262px;
+    //height: 459px;
+    position: relative;
+
+    @media (max-width: $tablet-mini) {
+        //height: 412px;
+    }
+
+    &:hover {
+        .card__btn {
+            opacity: 1;
+            transform: translateY(0%);
+            pointer-events: all;
+        }
+
+        .card__fav {
+            opacity: 1;
+            transform: translateY(0%);
+            
+        }
+    }
+ }
+
+ .card__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+ }
+
+.card__picture {
+    position: relative;
+    margin-bottom: 12px;
+    background-color: #F3F5F7;
+    text-align: center;
+ }
+
+.card__new {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 11;
+    padding: 4px 14px;
+
+    @media (max-width: $tablet-mini) {
+        top: 8px;
+        left: 8px;
+    }
+}
+
+.card__btn {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 11;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 0.2s ease-in;
+    pointer-events: none;
+
+    @media (max-width: $tablet-mini) {
+        bottom: 14px;
+        left: 14px;
+        right: 14px;
+    }
+    
+    
+    & > .btn {
+        width: 230px;
+        height: 46px;
+        font-size: 16px;
+        line-height: 46px;
+
+        @media (max-width: $tablet-mini) {
+            width: 203px;
+            height: 40px;
+            line-height: 40px;
+            letter-spacing: -0.4px;
+        }
+    }
+}
+
+.card__fav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in;
+   
+}
+
+.card__rating { 
+    display: inline-flex;
+    gap: 2px;
+    margin-bottom: 4px;
+}
+
+.card__title { 
+    margin-bottom: 4px;
+
+    p {
+        font-family: var(--font-main);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.625; 
+	    color: $black; 
+
+        &.card__title--ellipsis {
+           
+            @media (max-width: $tablet-mini) {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-wrap: nowrap;
+            }
+            
+        }
+        
+        @media (max-width: $tablet-mini) {
+            font-size: 14px;
+            line-height: 1.57; 
+        }
+    }
+}
+
+.card__price { 
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.57; 
+	color: $black2;  
+    
+    
+}

@@ -1,0 +1,96 @@
+
+.nav { 
+    padding: 18px 0;
+    background-color: rgba(255, 171, 0, 0.64);
+}
+
+.nav__row { 
+    @extend %flex_space_between;
+}
+
+.nav__logo {
+    font-family: var(--font-main);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    color: #000000;
+
+    @media (max-width: $tablet-mini) {
+        margin-right: auto;
+        padding-left: 4px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+ }
+
+ .menu-btn {
+    display: none;
+
+    @media (max-width: $tablet-mini) {
+        display: block;
+    }
+ }
+
+.nav__list { 
+    @extend %flex_space_between;
+    gap: 40px;
+
+    @media (max-width: $tablet-mini) {
+        display: none;
+    }
+
+    li {
+        font-family: var(--font-nav);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+
+        a {
+            color: $black;
+        }
+    }
+}
+
+.menu_link {
+    @extend %flex_space_between;
+    gap: 2px;
+
+    img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+.nav__btns {
+    @extend %flex_space_between;
+    gap: 16px;
+
+    .nav-btn {
+        @media (max-width: $tablet-mini) {
+            &:nth-child(1), &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+ }
+
+.shopping {
+    @extend %flex_space_between;
+    gap: 5px;
+}
+
+.shopping-count {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $black;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    color: $yellow
+ }

@@ -1,0 +1,125 @@
+
+.collection {
+    padding: 48px 0 0 0;
+
+    @media (max-width: $tablet-mini) {
+        padding: 40px 0 0 0;
+    }
+ }
+
+.collection__title {
+    margin-bottom: 48px;
+
+    @media (max-width: $laptop-mini) {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: $tablet-mini) {
+        margin-bottom: 16px;
+    }
+
+ }
+
+.collection__grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    @media (max-width: $tablet-mini) {
+        grid-template-columns: 1fr;
+        //grid-template-rows: repeat(4, auto);
+        grid-auto-rows: 1fr;
+        gap: 16px;
+    }
+}
+
+.plate { 
+    position: relative;
+
+    & > .plate__desc {
+        position: absolute;
+        z-index: 10;
+        left: 32px;
+        bottom: 48px;
+
+        @media (max-width: $tablet-size) {
+            left: 0;
+        }
+
+        @media (max-width: $tablet-mini) {
+           // left: 32px;
+            bottom: 32px;
+        }
+    }
+
+    & > .plate__bg {
+        display: block;
+
+        @media (max-width: $tablet-mini) {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+    }
+
+}
+
+.plate--tall { 
+    grid-row: span 2;
+
+    @media (max-width: $tablet-mini) {
+        //grid-row: auto;
+   }
+
+    & > .plate__desc {
+        left: 48px;
+
+        @media (max-width: $tablet-mini) {
+           left: 0;
+        }
+    }
+
+    & > .plate__bg {
+        display: block;
+
+        @media (max-width: $tablet-mini) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+.plate__title { 
+    font-family: var(--font-accent);
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: $black2;
+    margin-bottom: 12px;
+
+    @media (max-width: $tablet-size) {
+        font-size: 28px;
+    }
+
+    @media (max-width: $tablet-mini) {
+        margin-bottom: 8px;
+    }
+}
+
+.plate__link { 
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -0.4px;
+    color: $black2;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $black2;
+
+    img {
+        margin-left: 4px;
+    }
+}

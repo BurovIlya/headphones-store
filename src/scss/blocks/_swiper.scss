@@ -1,0 +1,27 @@
+.swiper {
+    width: auto;
+    height: 459px;
+
+    @media (max-width: $tablet-mini) {
+        height: 412px;
+    }
+
+    .swiper-slide {
+        width: 262px!important;
+        
+        @media (max-width: $tablet-mini) {
+            width: 231px!important;
+            //margin-right: 16px!important;
+        }
+    }
+}
+
+.swiper-pagination {
+    position: static!important;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+  
